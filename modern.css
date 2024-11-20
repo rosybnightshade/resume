@@ -1,0 +1,116 @@
+/*major areas*/
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body {
+    padding:20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width:100%;
+}
+p {
+    padding-top:5px;
+}
+/*specific tags*/
+ header h1{
+    font-size: 4em;
+    margin:5px;
+} 
+h1 {
+    font-size: 32px;
+}
+h2 {
+    margin:5px;
+}
+hr {
+    margin: 3px;
+}
+ul li {
+    list-style-type: none;
+}
+.sidebar p {
+    padding:5px;
+}
+
+/*workexperience*/
+.ux .senior{
+    margin: 4px;
+}
+/*grid stuff*/
+.container {
+    box-shadow: 1px 1px 15px black;
+    display: grid;
+    grid-template-columns: 0.3fr 1fr 1fr;
+    grid-template-rows: repeat(4 1fr);
+    grid-template-areas: 
+    "header header header"
+    "sidebar main main"
+    "sidebar main main"
+    "sidebar main main";
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: cadetblue;
+    padding:30px;
+}
+.main {
+    grid-area: main;
+    margin-left:20px;
+}
+/*flexbox*/
+header {
+    grid-area:header;
+    align-items:center;
+    justify-content: space-between;
+    display:flex;
+    background-color: darkcyan;
+    padding:20px;
+}
+
+.chip{
+    background-color:lightblue;
+    border-radius: 20px;
+    margin:6px; 
+    padding:5px;
+}
+.chips {
+    display:flex;
+    flex-wrap: wrap;
+}
+.summary, .workexperience, .education, .projects {
+    margin: 30px;
+}
+
+/*img*/
+ header img {
+    aspect-ratio: 1/1;
+    object-fit:cover;
+    max-width:200px; 
+    border-radius:50%;
+    margin:20px;
+ }
+
+/*media queries*/
+@media (max-width:520px) {
+    .container {
+        display: grid;
+        box-shadow: 0.5px 0.5px 15px black;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+        "main";
+    }
+    header {
+        flex-direction: column;
+    }
+}
+@media (max-width: 300px) {
+    .container {
+        box-shadow: unset;
+        margin: 5px;
+    }
+}

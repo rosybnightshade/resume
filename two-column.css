@@ -1,0 +1,73 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(4 1fr);
+    grid-template-areas: 
+    "sidebar main main"
+    "sidebar main main"
+    "sidebar main main"
+    "sidebar main main";
+    margin:50px;
+    box-shadow: 1px 1px 15px black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ul li {
+    list-style-type: none;
+}
+h2 {
+    margin-bottom:5px;
+}
+header {
+    text-align: center;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: navy;
+    color:white;
+    padding:20px;
+}
+.stuff {
+    line-height: 30px;
+}
+.main { 
+    grid-area: main;
+    padding:20px;
+    text-align: left;
+}
+.summary, .experience, .education, .projects {
+    margin:10px;
+}
+img {
+    aspect-ratio: 1/1;
+    object-fit:cover;
+    max-width:200px; 
+    border-radius:50%;
+    margin:20px;
+}
+@media (max-width:520px) {
+    .container {
+        display: grid;
+        box-shadow: 0.5px 0.5px 15px black;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4 1fr);
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+        "main";
+    }
+    header {
+        flex-direction: column;
+    }
+}
+@media (max-width: 370px) {
+    .container {
+        box-shadow: unset;
+        margin: 5px;
+    }
+}

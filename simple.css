@@ -1,0 +1,61 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container {
+    height: 11in;
+    width:8.5in;
+    background-color: #D04B4B;
+    margin: 20px auto;
+    color: #400000;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    box-shadow: 5px 10px 15px black, 5px 10px 15px black;
+}
+header {
+    text-align: center;
+    padding:20px;
+}
+h2 {
+    margin-top: 10px;
+}
+header p {
+    margin-top: 10px;
+}
+
+.summary {
+    margin: 10px;
+    padding: 5px;
+}
+.experience {
+    margin:10px;
+    padding: 5px;
+}
+.skills {
+    margin: 10px;
+    padding: 10px;
+}
+.education {
+    margin: 10px;
+    padding: 5px;
+}
+.summary p, .summary h1,
+.experience p, .experience h1,
+.education p, .education h1 {
+    padding: 5px;
+}
+
+.list ul li {
+    padding:5px;
+    text-decoration: none;
+    list-style-type: none;
+}
+.experience ul li {
+  margin-left: 40px;
+}
+p {
+    margin-top: 5px;
+}
+hr {
+    border-color: black;
+}
